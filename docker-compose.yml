@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    container_name: meigen
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=meigen
+      - POSTGRES_PASSWORD=meigen
+volumes:
+  db-store:
