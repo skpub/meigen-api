@@ -2,7 +2,7 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=128)
-    hspw = models.UUIDField()
+    hspw = models.CharField(max_length=128)
     class Meta:
         db_table = 'user'
 
@@ -13,7 +13,7 @@ class UserGroup(models.Model):
         db_table = 'user_group'
 
 class Group(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128) 
     class Meta:
         db_table = 'group'
 
